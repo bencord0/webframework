@@ -16,15 +16,16 @@ func index(*http.Request) *http.Response {
     return TextResponse("Hello World!\n", http.StatusOK, nil)
 }
 
-var settings := Settings{
+var settings = Settings{
     Addr: "0.0.0.0:8000",
     Urls: []Url{
         {"/", index},
     },
 }
 
+application = NewApplication(settings)
+
 func main() {
-    application := NewApplication(settings)
     aplication.Run()
 }
 ```

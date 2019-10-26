@@ -10,6 +10,7 @@ var settings = Settings{
     Urls: []Url{
         {"/", index},
         {"/health", health},
+        {"/hits", hits},
         {"/ua", ua},
         {"/uuid", uuid},
     },
@@ -17,5 +18,6 @@ var settings = Settings{
         middleware.Pratchett{},
         middleware.Uppercase{},
         middleware.UUIDify{},
+        middleware.HitCounter{Cache: &cache},
     },
 }

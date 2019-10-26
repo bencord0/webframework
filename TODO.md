@@ -2,7 +2,6 @@
     * StreamingResponse
     * TemplateResponse (e.g. html?)
     * MarkdownResponse
-    * JSONResponse
     * ProtobufResponse
 
 - Dedicated URL matching
@@ -17,9 +16,6 @@
 
 - Datastores, there are a multiple datastore implementations in the ecosystem.
     This needs to be pluggable and swappable so that we don't dictate a single pattern
-
-- Caches, should this be done as middleware? What's the right way to communicate between
-    middleware and the view?
 
 - Testing:
     How easy are the views to tests? Can I combine datastores and logic errors?
